@@ -1,0 +1,17 @@
+{
+  "name": "CAEN Autograder Reminder",
+  "version": "0.1",
+  "description": "An extension for reminding one to sync with CAEN before submitting to the AG",
+  "manifest_version": 2,
+  "author": "Rajiv Bharadwaj",
+  "browser_action": {
+    "default_popup": "html/popup.html",
+    "default_title": "Test"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://autograder.io/*"],
+      "js": ["scripts/content.js"]
+    }
+  ]
+}
